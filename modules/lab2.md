@@ -13,7 +13,6 @@
 
 <!-- @section -->
 
-
 ## Overview
 
 ### **Data manipulation with Hive**
