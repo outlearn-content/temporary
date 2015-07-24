@@ -85,11 +85,11 @@ Enter the Ambari Dashboard URL and you should see a similar screen:
 
 Briefly skim through the Ambari Dashboard links (circled above) by clicking on
 
-1.  **Metrics**, **Heatmap** and **Configuration**
+1\.  **Metrics**, **Heatmap** and **Configuration**
 
 and then the
 
-2.  **Dashboard**, **Services**, **Hosts**, **Alerts**, **Admin** and User Views icon (represented by 3×3 matrix ) to become familiar with the Ambari resources available to you.
+2\.  **Dashboard**, **Services**, **Hosts**, **Alerts**, **Admin** and User Views icon (represented by 3×3 matrix ) to become familiar with the Ambari resources available to you.
 
 > **NOTE**  To learn more about Hadoop please explore the [HDP Getting Started documentation](http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.2.4/bk_getting-started-guide/content/ch_about-hortonworks-data-platform.html).
  If you have questions, feedback or need help getting your environment ready visit [developer.hortonworks.com](http://hortonworks.com/developer/). Please also explore the [HDP documentation](http://docs.hortonworks.com/). To ask a question check out the [Hortonworks Forums](http://hortonworks.com/community/forums/).

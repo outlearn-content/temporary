@@ -13,6 +13,7 @@
         {"module" : "prerequisites-and-overview"},
         {"module" : "lab0"},
         {"module" : "lab1"},
+        {"module" : "lab2"},
         {"module" : "lab5"},
         {"module" : "crash-course"},
         {"page" : "./pages/next-steps.md"}
@@ -25,6 +26,7 @@
     {"olm" : "./modules/crash-course.md"},
     {"olm" : "./modules/lab0.md"},
     {"olm" : "./modules/lab1.md"},
+    {"olm" : "./modules/lab2.md"},
     {"olm" : "./modules/lab5.md"}
   ],
 
