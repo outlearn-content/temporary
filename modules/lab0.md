@@ -37,12 +37,12 @@ Navigate to Ambari welcome page using the url given on Sandbox welcome page.
 
 Both the username and password to login are admin.
 
-> **NOTE****![sign](http://hortonworks.com/wp-content/uploads/2015/07/sign.png)**  If you want to search for the host address your sandbox is running on, ssh into the sandbox terminal upon successful installation and follow subsequent steps:
+> **NOTE**  If you want to search for the host address your sandbox is running on, ssh into the sandbox terminal upon successful installation and follow subsequent steps:
 
-1.  login using username as “root” and password as “hadoop”.
-2.  Type ifconfig and look for inet address under eth.
-3.  Use the inet address, append :8080 and open it into a browser. It shall direct you to Ambari login page.
-4.  This inet address is randomly generated for every session and therefore differs from session to session.
+>1.  login using username as “root” and password as “hadoop”.
+>2.  Type ifconfig and look for inet address under eth.
+>3.  Use the inet address, append :8080 and open it into a browser. It shall direct you to Ambari login page.
+>4.  This inet address is randomly generated for every session and therefore differs from session to session.
 
  |
 
@@ -91,5 +91,5 @@ and then the
 
 2.  **Dashboard**, **Services**, **Hosts**, **Alerts**, **Admin** and User Views icon (represented by 3×3 matrix ) to become familiar with the Ambari resources available to you.
 
-> **NOTE****![sign](http://hortonworks.com/wp-content/uploads/2015/07/sign.png)**  To learn more about Hadoop please explore the [HDP Getting Started documentation](http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.2.4/bk_getting-started-guide/content/ch_about-hortonworks-data-platform.html).
+> **NOTE**  To learn more about Hadoop please explore the [HDP Getting Started documentation](http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.2.4/bk_getting-started-guide/content/ch_about-hortonworks-data-platform.html).
  If you have questions, feedback or need help getting your environment ready visit [developer.hortonworks.com](http://hortonworks.com/developer/). Please also explore the [HDP documentation](http://docs.hortonworks.com/). To ask a question check out the [Hortonworks Forums](http://hortonworks.com/community/forums/).
