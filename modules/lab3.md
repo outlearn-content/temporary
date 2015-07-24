@@ -255,11 +255,11 @@ The **Arguments** section of the Pig View should now look like the following:
 
 **Step 3.4: Execute Pig Script on Tez**
 
-1.  You are now ready to execute the script. Click Execute on Tez checkbox and finally hit the blue **Execute** button to submit the job. Pig job will be submitted to the cluster. This will generate a new tab with a status of the running of the Pig job and at the top you will find a progress bar that shows the job status.
+1\.  You are now ready to execute the script. Click Execute on Tez checkbox and finally hit the blue **Execute** button to submit the job. Pig job will be submitted to the cluster. This will generate a new tab with a status of the running of the Pig job and at the top you will find a progress bar that shows the job status.
 
 ![Lab3_11](http://hortonworks.com/wp-content/uploads/2015/07/Lab3_11.png)
 
-1.  Wait for the job to complete. The output of the job is displayed in the **Results** section. Your script does not output any result – it stores the result into a Hive table – so your Results section will be empty.
+2\.  Wait for the job to complete. The output of the job is displayed in the **Results** section. Your script does not output any result – it stores the result into a Hive table – so your Results section will be empty.
 
 ![Lab3_12](http://hortonworks.com/wp-content/uploads/2015/07/Lab3_12.png)
 
@@ -267,7 +267,7 @@ The **Arguments** section of the Pig View should now look like the following:
 
 Click on the **Logs** twisty to see what happened when your script ran. This is where you will see any error messages. The log may scroll below the edge of your window so you may have to scroll down.
 
-1.  Go back to the Ambari Hive User View and browse the data in the riskfactor table to verify that your Pig job successfully populated this table. Here is what is should look like:
+3\.  Go back to the Ambari Hive User View and browse the data in the riskfactor table to verify that your Pig job successfully populated this table. Here is what is should look like:
 
 ![Lab3_14](http://hortonworks.com/wp-content/uploads/2015/07/Lab3_14.png)
 
