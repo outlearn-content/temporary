@@ -84,7 +84,7 @@ Notice it is already starting with Hive integration as we have preconfigured it 
 
 For improved Hive integration, HDP 2.3 offers [ORC file](http://hortonworks.com/blog/orcfile-in-hdp-2-better-compression-better-performance/) support for Spark. This allows Spark to read data stored in ORC files. Spark can leverage ORC file’s more efficient columnar storage and predicate pushdown capability for even faster in-memory processing. HiveContext is an instance of the Spark SQL execution engine that integrates with data stored in Hive. The more basic SQLContext provides a subset of the Spark SQL support that does not depend on Hive. It reads the configuration for Hive from hive-site.xml on the classpath.
 
-*   ****Import these sql libraries.****
+*   **Import these sql libraries.**
 
 ```sql
 import org.apache.spark.sql.hive.orc._
@@ -93,7 +93,7 @@ import org.apache.spark.sql._
 
 ![Lab4_5](http://hortonworks.com/wp-content/uploads/2015/07/Lab4_5.png)
 
-*   ****Instantiate HiveContext****
+*    **Instantiate HiveContext**
 
 ```sql
 val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
@@ -115,7 +115,7 @@ There are three methods for creating a RDD:
 *   The second method to create a RDD, is to reference a dataset. This dataset can come from any storage source supported by Hadoop such as HDFS, Cassandra, HBase etc.
 *   The third method to create a RDD is from transforming an existing RDD to create a new RDD. We will be using the later two methods in our tutorial.
 
-****1\. Use a simple show command to see the list of tables in Hive warehouse.****
+**1\. Use a simple show command to see the list of tables in Hive warehouse.**
 
 ```sql
 hiveContext.sql("show tables").collect.foreach(println)
@@ -125,7 +125,7 @@ hiveContext.sql("show tables").collect.foreach(println)
 
 You will notice that geolocation table and driver mileage table that we created in earlier tutorial are already listed in Hive metastore and can be directly queried upon.
 
-****2\. Query tables to build Spark RDD****
+**2\. Query tables to build Spark RDD**
 
 We will do a simple select query to fetch data from geolocation and drivermileage tables to a spark variable. Getting data into Spark this way also allows to copy table schema to RDD.
 
@@ -149,7 +149,7 @@ geolocation_temp1.take(10) geolocation_temp1.take(10)
 
 Both these commands will return 10 rows from respective RDD`s.
 
-****3\. Registering a Temporary table****
+**3\. Registering a Temporary table**
 
 Now let’s give this RDD a name, so that we can use it in Spark SQL statements
 
@@ -167,7 +167,7 @@ Once an RDD is instantiated, you can apply a [series of operations](https://spar
 *   **Transformation** operations, as the name suggests, create new datasets from an existing RDD and build out the processing DAG that can then be applied on the partitioned dataset across the YARN cluster. Transformations do not return a value. In fact, nothing is evaluated during the definition of these transformation statements. Spark just creates these Direct Acyclic Graphs or DAG, which will only be evaluated at runtime. We call this lazy evaluation.
 *   An **Action** operation, on the other hand, executes DAG and returns a value.
 
-****1\. Querying against the table****
+**1\. Querying against the table**
 
 Now that our schema’s RDD with data has a name, we can use Spark SQL commands to query it. Remember the table below is not a Hive table, it is just a RDD we are querying with SQL.
 
@@ -250,7 +250,7 @@ In this section we will try to store data in orc format in Hive from Spark.ORC i
 
 Predicate pushdown uses those indexes to determine which stripes in a file need to be read for a particular query and the row indexes can narrow the search to a particular set of 10,000 rows. ORC supports the complete set of types in Hive, including the complex types: structs, lists, maps, and unions.
 
-*   ****Create an ORC table****
+*   **Create an ORC table**
 
 Create a table and store it as ORC. Specifying as orc at the end of the SQL statement below ensures that the Hive table is stored in the ORC format.
 
