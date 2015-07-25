@@ -15,6 +15,7 @@
         {"module" : "lab1"},
         {"module" : "lab2"},
         {"module" : "lab3"},
+        {"module" : "lab4"},
         {"module" : "lab5"},
         {"module" : "crash-course"},
         {"page" : "./pages/next-steps.md"}
@@ -29,6 +30,7 @@
     {"olm" : "./modules/lab1.md"},
     {"olm" : "./modules/lab2.md"},
     {"olm" : "./modules/lab3.md"},
+    {"olm" : "./modules/lab4.md"},
     {"olm" : "./modules/lab5.md"}
   ],
 
