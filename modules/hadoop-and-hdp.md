@@ -68,9 +68,8 @@ Each project has been developed to deliver an explicit function and each has its
 
 Apache Hadoop can be useful across a range of use cases spanning virtually every vertical industry. It is becoming popular anywhere that you need to store, process, and analyze large volumes of data. Examples include digital marketing automation, fraud detection and prevention, social network and relationship analysis, predictive modeling for new drugs, retail in-store behavior analysis, and mobile device location-based marketing. To learn more about Apache Hadoop, watch the following introduction:
 
-<!-- <iframe width="500" height="375" src="https://www.youtube.com/embed/6UtD53BzDNk?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+<iframe width="500" height="375" src="https://www.youtube.com/embed/6UtD53BzDNk?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
 
--->
 
 ### **Hortonworks Data Platform (HDP)**
 
