@@ -11,7 +11,7 @@
       "pages" : [
         {"page" : "./pages/preface.md"},
         {"module" : "prerequisites-and-overview"},
-        {"module" : "hadoop-&-hdp"},
+        {"module" : "hadoop-and-hdp"},
         {"module" : "lab0"},
         {"module" : "lab1"},
         {"module" : "lab2"},
@@ -27,7 +27,7 @@
   "modules" : [
     {"olm" : "./modules/prerequisites-and-overview.md"},
     {"olm" : "./modules/crash-course.md"},
-    {"olm" : "./modules/hadoop-&-hdp.md"},
+    {"olm" : "./modules/hadoop-and-hdp.md"},
     {"olm" : "./modules/lab0.md"},
     {"olm" : "./modules/lab1.md"},
     {"olm" : "./modules/lab2.md"},

@@ -1,6 +1,6 @@
 <!--
 {
-"name" : "hadoop-&-hdp",
+"name" : "hadoop-and-hdp",
 "version" : "0.1",
 "title" : "Concepts: Hadoop & HDP",
 "description" : "TBD.",
