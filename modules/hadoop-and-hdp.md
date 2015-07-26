@@ -84,5 +84,7 @@ The Hortonworks **Sandbox** is a single node implementation of the Hortonworks D
 **Suggested Readings****:**
 
 > **NOTE** HDFS is one of the 4 components of [Apache Hadoop](http://hadoop.apache.org/) the other 3 are Hadoop Common, [Hadoop YARN](http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html) and [Hadoop MapReduce](http://hortonworks.com/hadoop/mapreduce/). To learn more about HDFS watch the following [HDFS introduction video](https://www.youtube.com/watch?v=1_ly9dZnmWc). To learn more about YARN watch the following [YARN introduction video](https://www.youtube.com/watch?v=ZYXVNxmMchc&list=PL2y_WpKCCNQc-7RJNoYym4_g7EZb3yzJW).
- Hadoop 2.0 Blogs:
- [Hadoop 2.7.0 Blog](http://hortonworks.com/blog/apache-hadoop-2-7-0-released/)[Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
+
+ > Hadoop 2.0 Blogs:
+ 
+ > [Hadoop 2.7.0 Blog](http://hortonworks.com/blog/apache-hadoop-2-7-0-released/)[Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
