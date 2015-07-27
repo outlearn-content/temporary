@@ -3,7 +3,7 @@
 "name" : "lab0",
 "version" : "0.1",
 "title" : "Lab 0: Set-up",
-"description" : "TBD.",
+"description" : "Start the Sandbox VM and Open Ambari.",
 "freshnessDate" : 2015-07-23,
 "homepage" : "http://hortonworks.com/",
 "canonicalSource" : "http://hortonworks.com/hadoop-tutorial/hello-world-an-introduction-to-hadoop-hcatalog-hive-and-pig/#section_6",

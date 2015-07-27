@@ -3,7 +3,7 @@
 "name" : "lab1",
 "version" : "0.1",
 "title" : "Lab 1: HDFS - Loading Data",
-"description" : "TBD.",
+"description" : "Loading Sensor Data into HDFS.",
 "freshnessDate" : 2015-07-23,
 "homepage" : "http://hortonworks.com/",
 "canonicalSource" : "http://hortonworks.com/hadoop-tutorial/hello-world-an-introduction-to-hadoop-hcatalog-hive-and-pig/#section_7",

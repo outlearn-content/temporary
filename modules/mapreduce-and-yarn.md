@@ -3,7 +3,7 @@
 "name" : "mapreduce-and-yarn",
 "version" : "0.1",
 "title" : "Concepts: MapReduce & YARN",
-"description" : "TBD.",
+"description" : "Get familiar with MapReduce and how YARN addresses some of its limitations",
 "freshnessDate" : 2015-07-23,
 "homepage" : "http://hortonworks.com/",
 "canonicalSource" : "http://hortonworks.com/hadoop-tutorial/hello-world-an-introduction-to-hadoop-hcatalog-hive-and-pig/#section_4",

@@ -13,9 +13,7 @@
 
 <!-- @section -->
 
-## Overview
-
-### **Data manipulation with Hive**
+## Data manipulation with Hive
 
 **Introduction:**
 
@@ -44,7 +42,9 @@ The tutorial is a part of series of hands on tutorial to get you started on HDP 
 
 Hive is a SQL like query language that enables analysts familiar with SQL to run queries on large volumes of data. Hive has three main functions: data summarization, query and analysis. Hive provides tools that enable easy data extraction, transformation and loading (ETL).
 
-#### **Step 2.1: Become Familiar with Ambari Hive User View**
+<!-- @section -->
+
+##  Step 2.1: Become Familiar with Ambari Hive User View
 
 Apache Hive™ presents a relational view of data in HDFS and ensures that users need not worry about where or in what format their data is stored. Hive can display data from RCFile format, text files, ORC, JSON, parquet, sequence files and many of other formats in a tabular view. Through the use of SQL you can view your data as a table and create queries like you would in an RDBMS.
 
@@ -83,7 +83,11 @@ Now let’s take a closer look at the SQL editing capabilities in the User View:
 
 Take a few minutes to explore the various Hive User View features.
 
-**Step 2.2: Define a Hive Table**
+<!-- @task, "text" : "Complete Step 2.1."-->
+
+<!-- @section -->
+
+## Step 2.2: Define a Hive Table
 
 Now that you are familiar with the Hive User View, let’s create the initial staging tables for the geolocation and trucks data. In this section we will learn how to use the Ambari Hive User View to create four tables: geolocaiton_stage, trucking_stage, geolocation, trucking. First we are going to create 2 tables to stage the data in their original csv text format and then will create two more tables where we will optimize the storage with ORC. Here is a visual representation of the Data Flow:
 
@@ -114,7 +118,35 @@ CREATE TABLE geolocation_stage (truckid string, driverid string, event string, l
 –Create table trucks for staging initial load
 
 ```sql
-CREATE TABLE trucks_stage(driverid string, truckid string, model string, jun13_miles bigint, jun13_gas bigint, may13_miles bigint, may13_gas bigint, apr13_miles bigint, apr13_gas bigint, mar13_miles bigint, mar13_gas bigint, feb13_miles bigint, feb13_gas bigint, jan13_miles bigint, jan13_gas bigint, dec12_miles bigint, dec12_gas bigint, nov12_miles bigint, nov12_gas bigint, oct12_miles bigint, oct12_gas bigint, sep12_miles bigint, sep12_gas bigint, aug12_miles bigint, aug12_gas bigint, jul12_miles bigint, jul12_gas bigint, jun12_miles bigint, jun12_gas bigint,may12_miles bigint, may12_gas bigint, apr12_miles bigint, apr12_gas bigint, mar12_miles bigint, mar12_gas bigint, feb12_miles bigint, feb12_gas bigint, jan12_miles bigint, jan12_gas bigint, dec11_miles bigint,  dec11_gas bigint, nov11_miles bigint, nov11_gas bigint, oct11_miles bigint, oct11_gas bigint, sep11_miles bigint, sep11_gas bigint, aug11_miles bigint, aug11_gas bigint, jul11_miles bigint, jul11_gas bigint, jun11_miles bigint, jun11_gas bigint, may11_miles bigint, may11_gas bigint, apr11_miles bigint, apr11_gas bigint, mar11_miles bigint, mar11_gas bigint, feb11_miles bigint, feb11_gas bigint, jan11_miles bigint, jan11_gas bigint, dec10_miles bigint, dec10_gas bigint, nov10_miles bigint, nov10_gas bigint, oct10_miles bigint, oct10_gas bigint, sep10_miles bigint, sep10_gas bigint, aug10_miles bigint, aug10_gas bigint, jul10_miles bigint, jul10_gas bigint, jun10_miles bigint, jun10_gas bigint, may10_miles bigint, may10_gas bigint, apr10_miles bigint, apr10_gas bigint, mar10_miles bigint, mar10_gas bigint, feb10_miles bigint, feb10_gas bigint, jan10_miles bigint, jan10_gas bigint, dec09_miles bigint, dec09_gas bigint, nov09_miles bigint, nov09_gas bigint, oct09_miles bigint, oct09_gas bigint, sep09_miles bigint, sep09_gas bigint, aug09_miles bigint, aug09_gas bigint, jul09_miles bigint, jul09_gas bigint, jun09_miles bigint, jun09_gas bigint, may09_miles bigint, may09_gas bigint, apr09_miles bigint, apr09_gas bigint, mar09_miles bigint, mar09_gas bigint, feb09_miles bigint, feb09_gas bigint, jan09_miles bigint, jan09_gas bigint)ROW FORMAT DELIMITEDFIELDS TERMINATED BY ','STORED AS TEXTFILE;
+CREATE TABLE trucks_stage(driverid string, truckid string, model string,
+jun13_miles bigint, jun13_gas bigint, may13_miles bigint, may13_gas bigint,
+apr13_miles bigint, apr13_gas bigint, mar13_miles bigint, mar13_gas bigint,
+feb13_miles bigint, feb13_gas bigint, jan13_miles bigint, jan13_gas bigint,
+dec12_miles bigint, dec12_gas bigint, nov12_miles bigint, nov12_gas bigint,
+oct12_miles bigint, oct12_gas bigint, sep12_miles bigint, sep12_gas bigint,
+aug12_miles bigint, aug12_gas bigint, jul12_miles bigint, jul12_gas bigint,
+jun12_miles bigint, jun12_gas bigint,may12_miles bigint, may12_gas bigint,
+apr12_miles bigint, apr12_gas bigint, mar12_miles bigint, mar12_gas bigint,
+feb12_miles bigint, feb12_gas bigint, jan12_miles bigint, jan12_gas bigint,
+dec11_miles bigint,  dec11_gas bigint, nov11_miles bigint, nov11_gas bigint,
+oct11_miles bigint, oct11_gas bigint, sep11_miles bigint, sep11_gas bigint,
+aug11_miles bigint, aug11_gas bigint, jul11_miles bigint, jul11_gas bigint,
+jun11_miles bigint, jun11_gas bigint, may11_miles bigint, may11_gas bigint,
+apr11_miles bigint, apr11_gas bigint, mar11_miles bigint, mar11_gas bigint,
+feb11_miles bigint, feb11_gas bigint, jan11_miles bigint, jan11_gas bigint,
+dec10_miles bigint, dec10_gas bigint, nov10_miles bigint, nov10_gas bigint,
+oct10_miles bigint, oct10_gas bigint, sep10_miles bigint, sep10_gas bigint,
+aug10_miles bigint, aug10_gas bigint, jul10_miles bigint, jul10_gas bigint,
+jun10_miles bigint, jun10_gas bigint, may10_miles bigint, may10_gas bigint,
+apr10_miles bigint, apr10_gas bigint, mar10_miles bigint, mar10_gas bigint,
+feb10_miles bigint, feb10_gas bigint, jan10_miles bigint, jan10_gas bigint,
+dec09_miles bigint, dec09_gas bigint, nov09_miles bigint, nov09_gas bigint,
+oct09_miles bigint, oct09_gas bigint, sep09_miles bigint, sep09_gas bigint,
+aug09_miles bigint, aug09_gas bigint, jul09_miles bigint, jul09_gas bigint,
+jun09_miles bigint, jun09_gas bigint, may09_miles bigint, may09_gas bigint,
+apr09_miles bigint, apr09_gas bigint, mar09_miles bigint, mar09_gas bigint,
+feb09_miles bigint, feb09_gas bigint, jan09_miles bigint, jan09_gas bigint)
+ROW FORMAT DELIMITEDFIELDS TERMINATED BY ','STORED AS TEXTFILE;
 ```
 
 
@@ -136,9 +168,9 @@ For details on these clauses consult the [Apache Hive Language Manual](https://c
 
 9\. Click on the **Load sample data** icon to generate and execute a select SQL statement to query the table for a 100 rows. Notice your two new tables are currently empty.
 
->**NOTE**  You can have multiple SQL statements within each editor worksheet, but each statement needs to be separated by a semicolon “;”. If you have multiple statements within a worksheet but you only want to run one of them just highlight the statement you want ran and then click the Execute button.
+>**NOTE:**  You can have multiple SQL statements within each editor worksheet, but each statement needs to be separated by a semicolon “;”. If you have multiple statements within a worksheet but you only want to run one of them just highlight the statement you want ran and then click the Execute button.
 
-> **NOTE** A few additional commands to explore tables:show tables;List the tables created in the database by looking up the list of tables from the metadata stored in HCatalogdescribe _table_name_;Provides a list of columns for a particular table (ie describe geolocation_stage;)show create _table_name_;Provides the DDL to recreate a table (ie show create table geolocation_stage;)
+> **NOTE:** A few additional commands to explore tables:show tables;List the tables created in the database by looking up the list of tables from the metadata stored in HCatalogdescribe _table\_name_;Provides a list of columns for a particular table (ie describe geolocation_stage;)show create _table\_name_;Provides the DDL to recreate a table (ie show create table geolocation_stage;)
 
 10\. By default, when you create a table in Hive, a directory with the same name gets created in the /apps/hive/warehouse folder in HDFS. Using the Ambari Files User View, navigate to the /apps/hive/warehouse folder. You should see both a geolocation_stage and trucks_stage directory:
 
@@ -146,7 +178,11 @@ For details on these clauses consult the [Apache Hive Language Manual](https://c
 
 > **NOTE** The definition of a Hive table and its associated metadata (i.e., the directory the data is stored in, the file format, what Hive properties are set, etc.) are stored in the Hive metastore, which on the Sandbox is a MySQL database.
 
-**Step 2.3: Load Data into a Hive table**
+<!-- @task, "text" : "Complete Step 2.2."-->
+
+<!-- @section -->
+
+## Step 2.3: Load Data into a Hive table
 
 1.  Let’s load some data into your two Hive tables. Populating a Hive table can be done in various ways. A simple way to populate a table is to put a file into the directory associated with the table. Using the Ambari Files User View, click on the **Move** icon next to the file /temp/admin/data/geolocation.csv. (Clicking on **Move** is similar to “cut” in cut-and-paste.)
 
@@ -180,9 +216,13 @@ LOAD DATA INPATH '/temp/admin/data/trucks.csv' OVERWRITE INTO TABLE trucks_stage
 
 7\. From the Files view, navigate to the /temp/admin/data folder. Notice the folder is empty! The LOAD DATA INPATH command moved the trucks.csv file from the /user/admin/data folder to the /apps/hive/warehouse/trucks_stage folder.
 
-**Step 2.4: Define an ORC Table in Hive**
+<!-- @task, "text" : "Complete Step 2.3."-->
 
-#### **Introducing** [**Apache ORC**](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+ORC)
+<!-- @section -->
+
+## Step 2.4: Define an ORC Table in Hive
+
+#### Introducing [Apache ORC](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+ORC)
 
 The Optimized Row Columnar ([new Apache ORC project](http://hortonworks.com/blog/apache-orc-launches-as-a-top-level-project/)) file format provides a highly efficient way to store Hive data. It was designed to overcome limitations of the other Hive file formats. Using ORC files improves performance when Hive is reading, writing, and processing data.
 
@@ -239,9 +279,11 @@ CREATE TABLE trucks STORED AS ORC AS SELECT * FROM trucks_stage;
 
 >Exits out of the Hive shell.
 
- |
+<!-- @task, "text" : "Complete Step 2.4."-->
 
-#### **Step 2.5: Review Hive Settings**
+<!-- @section -->
+
+## Step 2.5: Review Hive Settings
 
 1.  Open the Ambari Dashboard in another tab by right clicking on the Ambari icon
 
@@ -291,7 +333,11 @@ As you can see from the green circle above the hive.vectorized.execution.enabled
 >    *   [Interactive Query for Hadoop with Apache Hive on Apache Tez](http://hortonworks.com/hadoop-tutorial/supercharging-interactive-queries-hive-tez/)
 >    *   [Evaluating Hive with Tez as a Fast Query Engine](http://hortonworks.com/blog/evaluating-hive-with-tez-as-a-fast-query-engine/)
 
-#### **Step 2.6: Analyze the Trucks Data**
+<!-- @task, "text" : "Complete Step 2.5."-->
+
+<!-- @section -->
+
+## Step 2.6: Analyze the Trucks Data
 
 Next we will be using Hive, Pig and Excel to analyze derived data from the geolocation and trucks tables. The business objects are to better understand the risk the company is under from fatigue of drivers, over-used trucks, and the impact of various trucking events on risk. In order to accomplish this we are going to apply a series of transformations to the source data, mostly though SQL, and use Pig to calculate risk. In Step 10 we will be using Microsoft Excel to generate a series of charts to better understand risk.
 ![Lab2_211](http://hortonworks.com/wp-content/uploads/2015/07/Lab2_211.png)
@@ -303,7 +349,9 @@ Let’s get started with the first transformation. We want to calculate the mile
 — Create table truck_mileage from existing trucking data
 
 ```sql
-CREATE TABLE truck_mileage STORED AS ORC AS SELECT truckid, driverid, rdate, miles, gas, miles / gas mpg FROM trucks LATERAL VIEW stack( 54, 'jun13',jun13_miles,jun13_gas,'may13',may13_miles,may13_gas,'apr13',apr13_miles,apr13_gas,'mar13',mar13_miles,mar13_gas,'feb13',feb13_miles,feb13_gas,'jan13',jan13_miles,jan13_gas,'dec12',dec12_miles,dec12_gas,'nov12',nov12_miles,nov12_gas,'oct12',oct12_miles,oct12_gas,'sep12',sep12_miles,sep12_gas,'aug12',aug12_miles,aug12_gas,'jul12',jul12_miles,jul12_gas,'jun12',jun12_miles,jun12_gas,'may12',may12_miles,may12_gas,'apr12',apr12_miles,apr12_gas,'mar12',mar12_miles,mar12_gas,'feb12',feb12_miles,feb12_gas,'jan12',jan12_miles,jan12_gas,'dec11',dec11_miles,dec11_gas,'nov11',nov11_miles,nov11_gas,'oct11',oct11_miles,oct11_gas,'sep11',sep11_miles,sep11_gas,'aug11',aug11_miles,aug11_gas,'jul11',jul11_miles,jul11_gas,'jun11',jun11_miles,jun11_gas,'may11',may11_miles,may11_gas,'apr11',apr11_miles,apr11_gas,'mar11',mar11_miles,mar11_gas,'feb11',feb11_miles,feb11_gas,'jan11',jan11_miles,jan11_gas,'dec10',dec10_miles,dec10_gas,'nov10',nov10_miles,nov10_gas,'oct10',oct10_miles,oct10_gas,'sep10',sep10_miles,sep10_gas,'aug10',aug10_miles,aug10_gas,'jul10',jul10_miles,jul10_gas,'jun10',jun10_miles,jun10_gas,'may10',may10_miles,may10_gas,'apr10',apr10_miles,apr10_gas,'mar10',mar10_miles,mar10_gas,'feb10',feb10_miles,feb10_gas,'jan10',jan10_miles,jan10_gas,'dec09',dec09_miles,dec09_gas,'nov09',nov09_miles,nov09_gas,'oct09',oct09_miles,oct09_gas,'sep09',sep09_miles,sep09_gas,'aug09',aug09_miles,aug09_gas,'jul09',jul09_miles,jul09_gas,'jun09',jun09_miles,jun09_gas,'may09',may09_miles,may09_gas,'apr09',apr09_miles,apr09_gas,'mar09',mar09_miles,mar09_gas,'feb09',feb09_miles,feb09_gas,'jan09',jan09_miles,jan09_gas )dummyalias AS rdate, miles, gas;
+CREATE TABLE truck_mileage STORED AS ORC AS SELECT truckid, driverid, rdate,
+miles, gas, miles / gas mpg FROM trucks LATERAL VIEW stack( 54, 'jun13',jun13_miles,jun13_gas,'may13',may13_miles,may13_gas,'apr13',
+  apr13_miles,apr13_gas,'mar13',mar13_miles,mar13_gas,'feb13',feb13_miles,feb13_gas,'jan13',jan13_miles,jan13_gas,'dec12',dec12_miles,dec12_gas,'nov12',nov12_miles,nov12_gas,'oct12',oct12_miles,oct12_gas,'sep12',sep12_miles,sep12_gas,'aug12',aug12_miles,aug12_gas,'jul12',jul12_miles,jul12_gas,'jun12',jun12_miles,jun12_gas,'may12',may12_miles,may12_gas,'apr12',apr12_miles,apr12_gas,'mar12',mar12_miles,mar12_gas,'feb12',feb12_miles,feb12_gas,'jan12',jan12_miles,jan12_gas,'dec11',dec11_miles,dec11_gas,'nov11',nov11_miles,nov11_gas,'oct11',oct11_miles,oct11_gas,'sep11',sep11_miles,sep11_gas,'aug11',aug11_miles,aug11_gas,'jul11',jul11_miles,jul11_gas,'jun11',jun11_miles,jun11_gas,'may11',may11_miles,may11_gas,'apr11',apr11_miles,apr11_gas,'mar11',mar11_miles,mar11_gas,'feb11',feb11_miles,feb11_gas,'jan11',jan11_miles,jan11_gas,'dec10',dec10_miles,dec10_gas,'nov10',nov10_miles,nov10_gas,'oct10',oct10_miles,oct10_gas,'sep10',sep10_miles,sep10_gas,'aug10',aug10_miles,aug10_gas,'jul10',jul10_miles,jul10_gas,'jun10',jun10_miles,jun10_gas,'may10',may10_miles,may10_gas,'apr10',apr10_miles,apr10_gas,'mar10',mar10_miles,mar10_gas,'feb10',feb10_miles,feb10_gas,'jan10',jan10_miles,jan10_gas,'dec09',dec09_miles,dec09_gas,'nov09',nov09_miles,nov09_gas,'oct09',oct09_miles,oct09_gas,'sep09',sep09_miles,sep09_gas,'aug09',aug09_miles,aug09_gas,'jul09',jul09_miles,jul09_gas,'jun09',jun09_miles,jun09_gas,'may09',may09_miles,may09_gas,'apr09',apr09_miles,apr09_gas,'mar09',mar09_miles,mar09_gas,'feb09',feb09_miles,feb09_gas,'jan09',jan09_miles,jan09_gas )dummyalias AS rdate, miles, gas;
 ```
 
 ![Lab2_22](http://hortonworks.com/wp-content/uploads/2015/07/Lab2_22.png)
