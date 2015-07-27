@@ -99,5 +99,5 @@ The Hortonworks **Sandbox** is a single node implementation of the Hortonworks D
 
  > Hadoop 2.0 Blogs:
 
- > * [Hadoop 2.7.0 Blog](http://hortonworks.com/blog/apache-hadoop-2-7-0-released/)
- > * [Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
+ > [Hadoop 2.7.0 Blog](http://hortonworks.com/blog/apache-hadoop-2-7-0-released/)  
+ > [Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
