@@ -13,15 +13,25 @@
 
 <!-- @section -->
 
-## Overview
+### Introduction
 
-### **Introduction**
+In this module you will learn about Apache Hadoop and what makes it scale to large data sets. We will also talk about various components of Hadoop ecosystem that make Apache Hadoop enterprise ready in form of Hortonworks Data Platform(HDP) distribution. The module discusses Apache Hadoop, its capabilities as a data platform and how the core of Hadoop and its surrounding ecosystem solution vendors provides the enterprise requirements to integrate alongside the Data Warehouse and other enterprise data systems as part of a modern data architecture, and as a step on the journey toward delivering an enterprise ‘Data Lake’.
 
-In this module you will learn about Apache Hadoop and what makes it scale to large data sets. We will also talk about various components of Hadoop ecosystem that make Apache Hadoop enterprise ready in form of Hortonworks Data Platform(HDP) distribution. The module discusses Apache Hadoop, its capabilities as a data platform and how the core of Hadoop and its surrounding ecosystem solution vendors provides the enterprise requirements to integrate alongside the Data Warehouse and other enterprise data systems as part of a modern data architecture, and as a step on the journey toward delivering an enterprise ‘Data Lake’
-
-#### **Apache Hadoop:**
+#### Apache Hadoop:
 
 Apache Hadoop® is an open source framework for distributed storage and processing of large sets of data on commodity hardware. Hadoop enables businesses to quickly gain insight from massive amounts of structured and unstructured data. Numerous Apache Software Foundation projects make up the services required by an enterprise to deploy, integrate and work with Hadoop.
+
+<!-- @multipleChoice -->
+
+Apache Hadoop
+
+- [ ] Uses customized hardware
+- [ ] Is focused on the needs of small businesses
+- [X] Can handle unstructured data
+
+Read again the previous paragraph to refresh your memory.
+
+<!-- @end -->
 
 > **NOTE**
 Hortonworks Blog : [Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
@@ -70,8 +80,9 @@ Apache Hadoop can be useful across a range of use cases spanning virtually every
 
 <iframe width="500" height="375" src="https://www.youtube.com/embed/6UtD53BzDNk?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
 
+<!-- @section -->
 
-### **Hortonworks Data Platform (HDP)**
+### Hortonworks Data Platform (HDP)
 
 Hortonworks Data Platform is a packaged software hadoop distribution that aim to ease deployment and management of Hadoop clusters compared with simply downloading the various Apache code bases and trying to run them together a system. Architected, developed, and built completely in the open, Hortonworks Data Platform (HDP) provides an enterprise ready data platform that enables organizations to adopt a Modern Data Architecture.
 
@@ -86,5 +97,5 @@ The Hortonworks **Sandbox** is a single node implementation of the Hortonworks D
 > **NOTE** HDFS is one of the 4 components of [Apache Hadoop](http://hadoop.apache.org/) the other 3 are Hadoop Common, [Hadoop YARN](http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html) and [Hadoop MapReduce](http://hortonworks.com/hadoop/mapreduce/). To learn more about HDFS watch the following [HDFS introduction video](https://www.youtube.com/watch?v=1_ly9dZnmWc). To learn more about YARN watch the following [YARN introduction video](https://www.youtube.com/watch?v=ZYXVNxmMchc&list=PL2y_WpKCCNQc-7RJNoYym4_g7EZb3yzJW).
 
  > Hadoop 2.0 Blogs:
- 
+
  > [Hadoop 2.7.0 Blog](http://hortonworks.com/blog/apache-hadoop-2-7-0-released/)[Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
