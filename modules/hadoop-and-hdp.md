@@ -34,8 +34,7 @@ Read again the previous paragraph to refresh your memory.
 <!-- @end -->
 
 
-> **NOTE**
-Hortonworks Blog : [Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
+> **NOTE**: Hortonworks Blog : [Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
 
 The base Apache Hadoop framework is composed of the following modules:
 
@@ -91,12 +90,14 @@ With YARN as its architectural center it provides a data platform for multi-work
 
 The Hortonworks **Sandbox** is a single node implementation of the Hortonworks Data Platform (HDP). It is packaged as a virtual machine to make evaluation and experimentation with HDP fast and easy. The tutorials and features in the Sandbox are oriented towards exploring how HDP can help you solve your business big data problems. The Sandbox tutorials will walk you through bringing some sample data into HDP and manipulating it using the tools built into HDP. The idea is to show you how you can get started and show you how to accomplish tasks in HDP. HDP is free to download and use in your enterprise and you can download it here: [Hortonworks Data Platform](http://hortonworks.com/download/)
 
-[Download](http://hortonworks.com/download/)
+<!-- @task, "text" : "Download the Hortonworks Data Platform."-->
+
 
 **Suggested Readings****:**
 
-> **NOTE** HDFS is one of the 4 components of [Apache Hadoop](http://hadoop.apache.org/) the other 3 are Hadoop Common, [Hadoop YARN](http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html) and [Hadoop MapReduce](http://hortonworks.com/hadoop/mapreduce/). To learn more about HDFS watch the following [HDFS introduction video](https://www.youtube.com/watch?v=1_ly9dZnmWc). To learn more about YARN watch the following [YARN introduction video](https://www.youtube.com/watch?v=ZYXVNxmMchc&list=PL2y_WpKCCNQc-7RJNoYym4_g7EZb3yzJW).
+> **NOTE:** HDFS is one of the 4 components of [Apache Hadoop](http://hadoop.apache.org/) the other 3 are Hadoop Common, [Hadoop YARN](http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html) and [Hadoop MapReduce](http://hortonworks.com/hadoop/mapreduce/). To learn more about HDFS watch the following [HDFS introduction video](https://www.youtube.com/watch?v=1_ly9dZnmWc). To learn more about YARN watch the following [YARN introduction video](https://www.youtube.com/watch?v=ZYXVNxmMchc&list=PL2y_WpKCCNQc-7RJNoYym4_g7EZb3yzJW).
 
  > Hadoop 2.0 Blogs:
 
- > [Hadoop 2.7.0 Blog](http://hortonworks.com/blog/apache-hadoop-2-7-0-released/)[Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
+ > * [Hadoop 2.7.0 Blog](http://hortonworks.com/blog/apache-hadoop-2-7-0-released/)
+ > * [Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
