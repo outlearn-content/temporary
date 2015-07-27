@@ -13,9 +13,7 @@
 
 <!-- @section -->
 
-## Overview
-
-### **Start the Sandbox VM and Open Ambari**
+## Start the Sandbox VM and Open Ambari
 
 Start the HDP Sandbox following the [Sandbox Install Guide](http://hortonworks.com/products/hortonworks-sandbox/#install) to start the VM:
 
@@ -37,14 +35,16 @@ Navigate to Ambari welcome page using the url given on Sandbox welcome page.
 
 Both the username and password to login are admin.
 
-> **NOTE**  If you want to search for the host address your sandbox is running on, ssh into the sandbox terminal upon successful installation and follow subsequent steps:
+<!-- @task, "text" : "Log in to Ambari."-->
+
+> **NOTE:**  If you want to search for the host address your sandbox is running on, ssh into the sandbox terminal upon successful installation and follow subsequent steps:
 
 >1.  login using username as “root” and password as “hadoop”.
 >2.  Type ifconfig and look for inet address under eth.
 >3.  Use the inet address, append :8080 and open it into a browser. It shall direct you to Ambari login page.
 >4.  This inet address is randomly generated for every session and therefore differs from session to session.
 
- |
+
 
 The following table has some useful URLs as well:
 
@@ -78,6 +78,8 @@ There are 5 key capabilities to explore in the Ambari Welcome screen:
 5.  “**Deploy Views**” provides administration for adding and removing Ambari User Views
 
 Take a few minutes to quickly explore these 5 capabilities and to become familiar their features.
+
+<!-- @task, "text" : "Explore the 5 key capabilities of Ambari and become familiar their features."-->
 
 Enter the Ambari Dashboard URL and you should see a similar screen:
 

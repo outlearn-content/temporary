@@ -3,7 +3,7 @@
 "name" : "hive-and-pig",
 "version" : "0.1",
 "title" : "Concepts: Hive and Pig",
-"description" : "TBD.",
+"description" : "Hive is a SQL like query language that enables analysts familiar with SQL to run queries on large volumes of data. With Pig, data structures are much richer and the transformations you can apply to data are much more powerful.",
 "freshnessDate" : 2015-07-23,
 "homepage" : "http://hortonworks.com/",
 "canonicalSource" : "http://hortonworks.com/hadoop-tutorial/hello-world-an-introduction-to-hadoop-hcatalog-hive-and-pig/#section_5",

@@ -13,9 +13,7 @@
 
 <!-- @section -->
 
-##  Overview
-
-### **Loading Sensor Data into HDFS**
+##  Loading Sensor Data into HDFS
 
 **Introduction:**
 
@@ -46,6 +44,8 @@ A single physical machine gets saturated with its storage capacity as the data g
     *   geolocation.csv – This is the collected geolocation data from the trucks. it contains records showing truck location, date, time, type of event, speed, etc.
     *   trucks.csv – This is data was exported from a relational database and it shows info on truck model, driverid, truckid, and aggregated mileage info.
 
+<!-- @task, "text" : "Complete Step 1.1."-->
+
 **Step 1.2: Load the Sensor Data into HDFS**
 
 *   Go to the Ambari Dashboard and open the HDFS User View by click on the User Views icon and selecting the HDFS Files menu item.
@@ -65,3 +65,5 @@ A single physical machine gets saturated with its storage capacity as the data g
 You can also perform the following operations on a file by right clicking on the file: **Download**, **Move**, **Permissions**, **Rename** and **Delete**.
 
 ![Lab2_5](http://hortonworks.com/wp-content/uploads/2015/07/Lab2_5.png)
+
+<!-- @task, "text" : "Complete Step 1.2."-->
