@@ -3,7 +3,7 @@
 "name" : "lab4",
 "version" : "0.1",
 "title" : "Lab 4: Spark - Risk Factor",
-"description" : "TBD.",
+"description" : "Use Apache Spark to compute Driver Risk Factor",
 "freshnessDate" : 2015-07-23,
 "homepage" : "http://hortonworks.com/",
 "canonicalSource" : "http://hortonworks.com/hadoop-tutorial/hello-world-an-introduction-to-hadoop-hcatalog-hive-and-pig/#section_10",
@@ -13,9 +13,7 @@
 
 <!-- @section -->
 
-## Overview
-
-### **Use Apache Spark to compute Driver Risk Factor**
+## Use Apache Spark to compute Driver Risk Factor
 
 **Introduction:**
 
@@ -56,7 +54,9 @@ You can run batch application such as MapReduce types jobs or iterative algorith
 ![Lab4_1](http://hortonworks.com/wp-content/uploads/2015/07/Lab4_1.png)
 Lets get started…!!
 
-**Step 4.1: Configuring Spark services using Ambari**
+<!-- @section -->
+
+## Step 4.1: Configuring Spark services using Ambari
 
 1.  Log on to Ambari Dashboard and click on Actions tab at the bottom left corner. Hit Start All to ensure Spark is running. Ambari will take some time to start all services and you can monitor the progress of it.
 
@@ -80,7 +80,11 @@ This will load the default Spark Scala API.
 
 Notice it is already starting with Hive integration as we have preconfigured it on the Hortonworks Sandbox.
 
-**Step 4.2: Create a HiveContext**
+<!-- @task, "text" : "Complete Step 4.1."-->
+
+<!-- @section -->
+
+## Step 4.2: Create a HiveContext
 
 For improved Hive integration, HDP 2.3 offers [ORC file](http://hortonworks.com/blog/orcfile-in-hdp-2-better-compression-better-performance/) support for Spark. This allows Spark to read data stored in ORC files. Spark can leverage ORC file’s more efficient columnar storage and predicate pushdown capability for even faster in-memory processing. HiveContext is an instance of the Spark SQL execution engine that integrates with data stored in Hive. The more basic SQLContext provides a subset of the Spark SQL support that does not depend on Hive. It reads the configuration for Hive from hive-site.xml on the classpath.
 
@@ -103,7 +107,11 @@ val hiveContext = new org.apache.spark.sql.hive.HiveContext(sc)
 
 > **NOTE** sc stands for Spark Context. SparkContext is the main entry point to everything Spark. It can be used to create RDDs and shared variables on the cluster. When you start up the Spark Shell, the SparkContext is automatically initialized for you with the variable sc.
 
-**Step 4.3: Creating a RDD from HiveContext**
+<!-- @task, "text" : "Complete Step 4.2."-->
+
+<!-- @section -->
+
+## Step 4.3: Creating a RDD from HiveContext
 
 **What is RDD?**
 
@@ -147,7 +155,7 @@ Make sure that the RDD`s carry the exact data. You can verify through following 
 geolocation_temp1.take(10) geolocation_temp1.take(10)
 ```
 
-Both these commands will return 10 rows from respective RDD`s.
+Both these commands will return 10 rows from respective RDD's.
 
 **3\. Registering a Temporary table**
 
@@ -157,8 +165,11 @@ Now let’s give this RDD a name, so that we can use it in Spark SQL statements
 geolocation_temp1.registerTempTable("geolocation_temp1")
 drivermileage_temp1.registerTempTable("drivermileage_temp1")
 ```
+<!-- @task, "text" : "Complete Step 4.3."-->
 
-**Step 4.4: RDD transformations and Actions**
+<!-- @section -->
+
+## Step 4.4: RDD transformations and Actions
 
 Typically, RDDs are instantiated by loading data from a shared filesystem, HDFS, HBase, or any data source offering a Hadoop InputFormat on a YARN cluster.
 
@@ -244,7 +255,11 @@ risk_factor_spark.collect.foreach(println)
 
 ![Lab4_15](http://hortonworks.com/wp-content/uploads/2015/07/Lab4_15.png)
 
-**Step 4.5: Load and Save Data into Hive as ORC**
+<!-- @task, "text" : "Complete Step 4.4."-->
+
+<!-- @section -->
+
+## Step 4.5: Load and Save Data into Hive as ORC
 
 In this section we will try to store data in orc format in Hive from Spark.ORC is a self-describing type-aware columnar file format designed for Hadoop workloads. It is optimized for large streaming reads and with integrated support for finding required rows fast. Storing data in a columnar format lets the reader read, decompress, and process only the values required for the current query. Because ORC files are type aware, the writer chooses the most appropriate encoding for the type and builds an internal index as the file is persisted.
 
@@ -277,3 +292,5 @@ hiveContext.sql("load data inpath 'risk_factor_spark' into table finalresults")
 ```sql
 hiveContext.sql(“select * from finalresults”)
 ```
+
+<!-- @task, "text" : "Complete Step 4.5."-->

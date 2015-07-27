@@ -3,7 +3,7 @@
 "name" : "lab3",
 "version" : "0.1",
 "title" : "Lab 3: Pig - Risk Factor",
-"description" : "TBD.",
+"description" : "Use Pig to compute Driver Risk Factor",
 "freshnessDate" : 2015-07-23,
 "homepage" : "http://hortonworks.com/",
 "canonicalSource" : "http://hortonworks.com/hadoop-tutorial/hello-world-an-introduction-to-hadoop-hcatalog-hive-and-pig/#section_9",
@@ -13,9 +13,7 @@
 
 <!-- @section -->
 
-## Overview
-
-### **Use Pig to compute Driver Risk Factor**
+## Use Pig to compute Driver Risk Factor
 
 #### **Introduction:**
 
@@ -49,7 +47,9 @@ Pig works with data from many sources, including structured and unstructured dat
 
 Pig scripts are translated into a series of MapReduce jobs that are run on the Apache Hadoop cluster.
 
-**Step 3.1: Define table schema**
+<!-- @section -->
+
+## Step 3.1: Define table schema
 
 Now we have refined the truck data to get the average mpg for each truck. The next task is to compute the risk factor for each driver which is the total miles driven/abnormal events. We can get the event information from the geolocation table.
 
@@ -84,7 +84,11 @@ CREATE TABLE riskfactor (driverid string,events bigint,totmiles bigint,riskfacto
 
 4\. Verify the riskfactor table was created successfully. It will be empty now, but you will populate it from a Pig script. You are now ready to compute the risk factor using Pig. Let’s take a look at Pig and how to execute Pig scripts from within Ambari.
 
-**Step 3.2: Create Pig Script**
+<!-- @task, "text" : "Complete Step 3.1."-->
+
+<!-- @section -->
+
+## Step 3.2: Create Pig Script
 
 In this tutorial we create and run a Pig script. We will use the Ambari Pig User View. Let’s get started…
 
@@ -233,7 +237,11 @@ store final_data into 'riskfactor' using org.apache.hive.hcatalog.pig.HCatStorer
 
 Save the file riskfactor.pig by clicking the **Save** button in the left-hand column.
 
-**Step 3.3: Quick Recap**
+<!-- @task, "text" : "Complete Step 3.2."-->
+
+<!-- @section -->
+
+## Step 3.3: Quick Recap
 
 Before we execute the code, let’s review the code again:
 
@@ -253,7 +261,11 @@ You need to configure the Pig Editor to use HCatalog so that the Pig script can 
 The **Arguments** section of the Pig View should now look like the following:
 ![Lab3_10](http://hortonworks.com/wp-content/uploads/2015/07/Lab3_10.png)
 
-**Step 3.4: Execute Pig Script on Tez**
+<!-- @task, "text" : "Complete Step 3.3."-->
+
+<!-- @section -->
+
+## Step 3.4: Execute Pig Script on Tez
 
 1\.  You are now ready to execute the script. Click Execute on Tez checkbox and finally hit the blue **Execute** button to submit the job. Pig job will be submitted to the cluster. This will generate a new tab with a status of the running of the Pig job and at the top you will find a progress bar that shows the job status.
 
@@ -272,3 +284,5 @@ Click on the **Logs** twisty to see what happened when your script ran. This is 
 ![Lab3_14](http://hortonworks.com/wp-content/uploads/2015/07/Lab3_14.png)
 
 At this point we now have our truck miles per gallon table and our risk factor table. The next step is to pull this data into Excel to create the charts for the visualization step.
+
+<!-- @task, "text" : "Complete Step 3.4."-->
