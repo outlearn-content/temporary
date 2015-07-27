@@ -3,7 +3,7 @@
 "name" : "hadoop-and-hdp",
 "version" : "0.1",
 "title" : "Concepts: Hadoop & HDP",
-"description" : "TBD.",
+"description" : "In this module you will learn about Apache Hadoop and what makes it scale to large data sets.",
 "freshnessDate" : 2015-07-23,
 "homepage" : "http://hortonworks.com/",
 "canonicalSource" : "http://hortonworks.com/hadoop-tutorial/hello-world-an-introduction-to-hadoop-hcatalog-hive-and-pig/#section_2",
@@ -30,6 +30,16 @@ Apache Hadoop
 - [X] Can handle unstructured data
 
 Read again the previous paragraph to refresh your memory.
+
+<!-- @end -->
+
+<!-- @multipleChoice -->
+
+Testing titles
+
+- [ ] A
+- [X] B
+
 
 <!-- @end -->
 
