@@ -33,15 +33,6 @@ Read again the previous paragraph to refresh your memory.
 
 <!-- @end -->
 
-<!-- @multipleChoice -->
-
-Testing titles
-
-- [ ] A
-- [X] B
-
-
-<!-- @end -->
 
 > **NOTE**
 Hortonworks Blog : [Understanding Hadoop 2.0](http://hortonworks.com/blog/understanding-hadoop-2-0/)
